@@ -1,0 +1,309 @@
+
+body{
+  background-color: white;
+} 
+
+/* Header/ Top Nav  */
+
+.header{
+  position: fixed;
+  top: 0px; 
+  width: 100vw;
+  justify-content: space-around;
+  height: 100px;
+  background-color: white;
+  font-family: "adobe-heiti-std", sans-serif; 
+  font-weight: 100;
+  color: black;
+}
+
+.nav-right {
+  background-color: #686868;
+}
+
+.nav-left {
+  padding: 25px;
+  color: black;
+  font-size: 16px;
+}
+
+.hh-home {
+  text-decoration: none;
+  color: black;
+  font-size: 24px;
+}
+
+a:hover{
+  text-decoration: none;
+  color: white;
+}
+
+.hh-home:hover{
+color: goldenrod;
+}
+
+
+/* Book Cover Section*/
+
+.book-cover-section {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  grid-gap: 25px;
+  padding: 100px 50px;
+  font-family: "adobe-heiti-std", sans-serif;
+  box-sizing: border-box;
+  margin-top: 50px;
+}
+
+/*------->> Responsive CSS  */
+
+/* Phones */
+@media screen and (min-width: 480px) and (max-width: 768px) {
+  .book-cover-section,
+  .book-text-container,
+  .blurb-section {
+    grid-template-columns: 2, 1fr;
+    align-content: center;
+  }
+}
+/* Tablets */
+@media screen and (min-width: 768px) and (max-width: 1200px) {
+  .book-cover-section,
+  .book-text-container,
+  .blurb-section{
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 100px;
+    margin-bottom:auto;
+  }
+  .book-text-container {
+    margin: 40px;
+    max-width: 500px;
+    justify-items: center;
+  }
+}
+/* Desktops */
+@media screen and (min-width: 1200px) {
+  .book-cover-section,
+  .book-text-container,
+  .blurb-section,
+  .about-section {
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom:auto;
+    
+  }
+  .book-text-container {
+    margin: 40px;
+    max-width: 600px;
+    max-height: 380px;
+    margin-top: 100px;
+    justify-items: center;
+    margin-bottom: 100px;
+  }
+}
+ /* ------->>  END Responsive CSS  */
+
+.responsive-img {
+  max-width: 100%;
+  height: auto;
+  min-height: 125px;
+  max-height: 650px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.9), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.book-text-container {
+  display: flex;
+  height: auto;
+  color: rgb(122, 122, 122);
+}
+
+.book-text {
+  font-size: 12pt;
+  font-family: 'Libre Baskerville', serif;
+  color: rgb(148, 125, 22);
+  text-align: right;
+}
+
+.book-text-title{
+  font-size: 12pt;
+  font-family: 'Libre Baskerville', serif;
+  color: rgb(148, 125, 22);
+  text-align: right;
+}
+
+.button{
+  text-decoration: none;
+  background-color: rgb(68, 68, 68) ;
+  color: white;
+  padding: 12px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  border-radius: 3px;
+  margin: 50px 10px;
+  font-family: "adobe-heiti-std", sans-serif;
+  width: 150px;
+}
+
+.button:hover{
+  background-color: darkgray;
+  transition: .5s ease-in-out;
+}
+
+/* Blurb Section */
+.blurb-section {
+  background-color: darkgray;
+  font-size: 16px;
+  font-family: "adobe-heiti-std", sans-serif;
+}
+
+.blurb-text {
+  font-family: 'Libre Baskerville', serif;
+  color: white;
+  padding: 10%;
+  text-align: left;
+}
+
+/* Review Section */
+.review-section{
+  font-size: 14px;
+  font-family: "adobe-heiti-std", sans-serif;
+  background-color: white;
+
+}
+.review-text {
+  display: flex;
+  font-family: 'Libre Baskerville', serif;
+  color: rgb(148, 125, 22);
+  margin-left: 10%;
+  padding-top: 150px;
+  padding-bottom: 150px;
+}
+
+.review-items{
+display: flex;
+flex-direction: columns;
+}
+
+.button-container{
+  margin-left: 10%;
+  align-content: right;
+}
+
+/* About Section*/
+.about-section{
+ background-color: lightgray;
+}
+
+.about-text{
+  color: black;
+}
+
+.bio-pic{
+  max-width: 100%;
+  height: auto;
+  min-height: 125px;
+  max-height: 350px;
+}
+
+.circle{
+  background-color: lightgray;
+}
+.circle1{
+height: 800px;
+width: 800px;
+margin-left: 180px;
+margin-bottom: 150px;
+}
+
+/* Hamburger */
+.menu-hamburger{
+  color: darkgray;
+ 
+}
+.controls {
+  position: absolute;
+  top: 0;
+  right: 0;
+  cursor: pointer;
+}
+
+.menu-control {
+  margin: 40px;
+  height: 45px;
+  width: 45px;
+}
+
+.menu {
+  background-color: rgb(148, 125, 22);
+  bottom: 0;
+  right: 0;
+  top: 0;
+  opacity: 0;
+  padding: 25px 45px;
+  position: fixed;
+  transition: all 0.45s ease-in-out;
+  transform: translateX(100%);
+  z-index: 10;
+  height: 100%;
+  width: 350px;
+  font-family: "adobe-heiti-std", sans-serif;
+}
+.menu-open {
+  transform: translateX(0%);
+  opacity: 4;
+}
+.menu a, .menu a:focus, .menu a:visited {
+  color: white;
+  display: block;
+  font-size: 30px;
+  margin: 40px auto;
+  text-align: right;
+  text-decoration: none;
+}
+
+.menu a:hover{
+  color: black;
+  transition: .1s ease-in-out;
+}
+
+/* Footer */
+.footer{
+  font-size: 14px;
+  font-family: "adobe-heiti-std", sans-serif;
+}
+
+
+/* CSS for "read.html" */
+.publications-section{
+  margin: 5%;
+}
+
+.journals-section,
+.contact-section{
+  background-color: lightgray;
+  padding: 50px 50px;
+}
+.journals-text,
+.contact-text {
+  margin: 10%;
+  background-color: lightgrey;
+  color: black;
+  font-family: 'Libre Baskerville', serif;
+}
+.journals-ul{
+  list-style-type: dash;
+  line-height: 40px;
+}
+
+.zoom:hover {
+    transform: scale(1.2); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+    transition: .6s ease-in-out;
+  }
+
+/* CSS for "contact.html" */
+.contact-section{
+  margin-top:50px;
+}
